@@ -12,7 +12,6 @@ class StaticPagesController < ApplicationController
 
   def index
     @whitelisted_words = @@whitelisted_words
-
     if params[:user] && params[:user] != '' && params[:tag] && params[:tag] != ''
       @images = flickr.photos.search(username: params[:user], tags: params[:tag], safe_search: 1)
     elsif params[:user] && params[:user] != ''
@@ -28,6 +27,7 @@ class StaticPagesController < ApplicationController
     if params[:tag]
       params[:tag].downcase.split(' ') do |tag|
         unless tag.chomp.in? @@whitelisted_words
+          params[:tag] = nil
           redirect_to '/'
         end
       end
