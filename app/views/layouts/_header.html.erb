@@ -13,7 +13,14 @@
 
         <form>
           <div class="field mb-0 is-grouped">
-            <input class="input m-1 mb-0" type="text" name="tag" placeholder="Search for tag...">
+            <div class="select m-1 mb-0">
+              <select type="text" name="tag" placeholder="Select a tag...">
+                <option value="" selected="selected">Select a tag...</option>
+                <% @whitelisted_words.each do |word| %>
+                  <option value=<%= word %>><%= word.capitalize %></option>
+                <% end %>
+              </select>
+            </div>
             <input class="input m-1 mb-0" type="text" name="user" placeholder="Search for user...">
             <button class="button m-1 mb-0 is-light is-outlined">Search</button>
           </div>
