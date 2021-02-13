@@ -1,24 +1,37 @@
-# README
+# Flickr Quickr
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+A no-fuss image search application that connects to Flickr API and fetches the first page of images by tag or username.
+Every image links back to the original Flickr photo.
 
-* Ruby version
+## Requirements
 
-* System dependencies
+Flickr Quickr is built using `Ruby v2.6.3` on `Rails 6.1.1`
 
-* Configuration
+## Gems
 
-* Database creation
+Database uses `pg` gem, styled with `bulma-rails` gem. Requires `figaro` and `flickraw` gems.
 
-* Database initialization
+## Setup
 
-* How to run the test suite
+After `git clone` run `bundle install` to install needed gems and dependencies.
 
-* Services (job queues, cache servers, search engines, etc.)
+Run `rails db:create`, `rails db:migrate`, `rails db:seed` to create database and seed with my pre-written data for
+testing.
 
-* Deployment instructions
+If you run into any trouble at the above step, you probably need to install `Postgresql` via `Homebrew` and start the
+service on your machine.
 
-* ...
+Make sure you have a Flickr developer account and set your key and secret in `config/database.yml`,
+as [figaro](https://github.com/laserlemon/figaro)
+suggests.
+
+## Deployed at
+
+* PENDING DEPLOYMENT
+
+---------------------------------------------------
+All code is written from scratch by Kostas. Assignment for [The Odin Project](https://www.theodinproject.com/).
+
+2021 - MIT License
