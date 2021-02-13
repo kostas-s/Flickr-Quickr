@@ -1,0 +1,29 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.scss.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.image:hover {
+
+  transition-duration: 0.3s;
+  transform: scale(1.08) rotateZ(1deg);
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.image {
+
+  border-radius: 10px;
+  -webkit-backface-visibility: hidden;
+
+  img {
+
+    border: solid 4px black;
+    border-radius: 10px;
+    z-index: 1;
+
+  }
+}
+
+
+.image:active {
+  transform: scale(0.9);
+}
