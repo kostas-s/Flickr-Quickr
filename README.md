@@ -2,8 +2,8 @@
 
 ## Description
 
-A no-fuss image search application that connects to Flickr API and fetches the first page of images by tag or username.
-Every image links back to the original Flickr photo.
+A no-fuss image search application that connects to Flickr API and fetches the first page of images by tag (I have a few
+predefined ones for testing purposes) or username. Every image links back to the original Flickr photo.
 
 ## Requirements
 
@@ -29,7 +29,7 @@ suggests.
 
 ## Deployed at
 
-* PENDING DEPLOYMENT
+* https://flickrquickr.herokuapp.com/
 
 ---------------------------------------------------
 All code is written from scratch by Kostas. Assignment for [The Odin Project](https://www.theodinproject.com/).
