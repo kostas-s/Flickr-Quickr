@@ -3,13 +3,15 @@
     <% if @images && @images.count > 0 %>
       <% @images.each do |img| %>
 
-        <div class="column is-one-fifth">
-          <figure class="image m-1">
-            <%= link_to FlickRaw.url_photopage(img) do %>
-              <%= image_tag FlickRaw.url_n(img) %>
-            <% end %>
-          </figure>
-        </div>
+        <% unless FlickRaw.url_n(img).blank? %>
+          <div class="column is-one-fifth">
+            <figure class="image m-1">
+              <%= link_to FlickRaw.url_photopage(img) do %>
+                <%= image_tag FlickRaw.url_n(img), loading: 'lazy' %>
+              <% end %>
+            </figure>
+          </div>
+        <% end %>
 
       <% end %>
     <% else %>
