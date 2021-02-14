@@ -13,11 +13,11 @@ class StaticPagesController < ApplicationController
   def index
     @whitelisted_words = @@whitelisted_words
     if params[:user] && params[:user] != '' && params[:tag] && params[:tag] != ''
-      @images = flickr.photos.search(username: params[:user], tags: params[:tag], safe_search: 1)
+      @images = flickr.photos.search(username: params[:user], tags: params[:tag], extras: :url_n, safe_search: 1)
     elsif params[:user] && params[:user] != ''
-      @images = flickr.photos.search(username: params[:user], safe_search: 1)
+      @images = flickr.photos.search(username: params[:user], extras: :url_n, safe_search: 1)
     elsif params[:tag] && params[:tag] != ''
-      @images = flickr.photos.search(tags: params[:tag], safe_search: 1)
+      @images = flickr.photos.search(tags: params[:tag], safe_search: 1, extras: :url_n)
     end
   end
 

@@ -7,7 +7,7 @@
           <div class="column is-one-fifth">
             <figure class="image m-1">
               <%= link_to FlickRaw.url_photopage(img) do %>
-                <%= image_tag FlickRaw.url_n(img), loading: 'lazy' %>
+                <%= image_tag img.url_n, loading: 'lazy' %>
               <% end %>
             </figure>
           </div>
